@@ -2,7 +2,7 @@ let books;
 
 async function renderBooks(filter) {
   const booksWrapper = document.querySelector('.books');
-  booksWrapper.classList += ' books__loading'
+  booksWrapper.classList.add(' books__loading')
   
   if (!books) {
     books = await getBooks();
@@ -21,7 +21,6 @@ else if (filter === 'RATING') {
 }
 
 
-console.log(ratingHTML)
 
   const booksHtml = books
     .map((book) => {
@@ -166,6 +165,6 @@ function getBooks() {
           rating: 4.5,
         },
       ]);
-    }), 1000};
-  )};
+    }, 1000);
+  });
 }
