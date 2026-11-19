@@ -70,9 +70,8 @@ function filterBooks(event) {
   
 }
 
-setTimeout(() => {
-  renderBooks();
-})
+
+renderBooks();
 // FAKE DATA
 function getBooks() {
   return new Promise((resolve) => {
@@ -166,7 +165,7 @@ function getBooks() {
           salePrice: null,
           rating: 4.5,
         },
-      ]};
-    }, 1000};
-  });
+      ]);
+    }), 1000};
+  )};
 }
